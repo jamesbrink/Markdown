@@ -19,7 +19,6 @@ end
 #basic host check
 before do
 	if !allowed_hosts.include?(request.ip)
-		puts "Rejected Host: #{request.ip}"
 		error 403
 	end
 end
